@@ -3,19 +3,20 @@ import {
   GraphQLString,
   GraphQLSchema,
   GraphQLList,
+  GraphQLInt,
 } from "graphql";
 
 const shopType = new GraphQLObjectType({
   name: "Shop",
   fields: {
-    id: { type: GraphQLString },
+    id: { type: GraphQLInt },
     name: { type: GraphQLString },
   },
 });
 
 const shops = [
-  { id: "1", name: "Shop A" },
-  { id: "2", name: "Shop B" },
+  { id: 1, name: "Shop A" },
+  { id: 2, name: "Shop B" },
 ];
 
 const QueryType = new GraphQLObjectType({
